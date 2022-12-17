@@ -9,4 +9,9 @@ services:
       - ./:/app
     tty: true
     ports:
+      # Port that can be checked in the browser while using HMR when running yarn dev
       - "3000:3000"
+      # Port that can be checked in the browser while using HMR when running yarn preview
+      - "4173:4173"
+    # Start the Vite development server when the container starts
+    # command: bash -c "yarn dev"
